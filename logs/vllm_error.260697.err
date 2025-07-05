@@ -1,0 +1,50 @@
+2025-07-05 19:02:24,940 - modelscope - INFO - PyTorch version 2.1.0+cu121 Found.
+2025-07-05 19:02:24,943 - modelscope - INFO - Loading ast index from /nfsshare/home/chengwenjie/.cache/modelscope/ast_indexer
+2025-07-05 19:02:25,504 - modelscope - INFO - Loading done! Current index file version is 1.9.4, with md5 44b2b63dcf85911a7b8975e99b7efe4b and a total number of 945 components indexed
+2025-07-05 19:02:28,789 - modelscope - INFO - initiate model from ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet
+2025-07-05 19:02:28,789 - modelscope - INFO - initiate model from location ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet.
+2025-07-05 19:02:28,793 - modelscope - WARNING - No preprocessor field found in cfg.
+2025-07-05 19:02:28,793 - modelscope - WARNING - No val key and type key found in preprocessor domain of configuration.json file.
+2025-07-05 19:02:28,793 - modelscope - WARNING - Cannot find available config to build preprocessor at mode inference, current config: {'model_dir': './dg/iic/cv_dla34_table-structure-recognition_cycle-centernet'}. trying to build by task and model information.
+2025-07-05 19:02:28,793 - modelscope - WARNING - Find task: table-recognition, model type: None. Insufficient information to build preprocessor, skip building preprocessor
+2025-07-05 19:02:28,864 - modelscope - INFO - loading model from ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet/pytorch_model.pt
+Traceback (most recent call last):
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/runpy.py", line 185, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/runpy.py", line 111, in _get_module_details
+    __import__(pkg_name)
+  File "/nfsshare/home/chengwenjie/pro/Extract/llm_related/table_extract/2.py", line 7, in <module>
+    result = table_recognition(image_path)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/modelscope/pipelines/base.py", line 219, in __call__
+    output = self._process_single(input, *args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/modelscope/pipelines/base.py", line 254, in _process_single
+    out = self.forward(out, **forward_params)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/modelscope/pipelines/cv/table_recognition_pipeline.py", line 89, in forward
+    pred = self.infer_model(input['img'])
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/modelscope/pipelines/cv/ocr_utils/model_dla34.py", line 645, in forward
+    x = self.base(x)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/modelscope/pipelines/cv/ocr_utils/model_dla34.py", line 366, in forward
+    x = self.base_layer(x)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: CUDNN_BACKEND_CONVOLUTION_DESCRIPTOR: SetAttribute CUDNN_ATTR_CONVOLUTION_CONV_MODE Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED

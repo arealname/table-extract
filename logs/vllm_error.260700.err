@@ -1,0 +1,11 @@
+2025-07-05 19:31:50,091 - modelscope - INFO - PyTorch version 1.7.1+cu110 Found.
+2025-07-05 19:31:50,095 - modelscope - INFO - Loading ast index from /nfsshare/home/chengwenjie/.cache/modelscope/ast_indexer
+2025-07-05 19:31:50,675 - modelscope - INFO - Loading done! Current index file version is 1.9.4, with md5 44b2b63dcf85911a7b8975e99b7efe4b and a total number of 945 components indexed
+2025-07-05 19:31:53,621 - modelscope - INFO - initiate model from ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet
+2025-07-05 19:31:53,621 - modelscope - INFO - initiate model from location ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet.
+2025-07-05 19:31:53,625 - modelscope - WARNING - No preprocessor field found in cfg.
+2025-07-05 19:31:53,625 - modelscope - WARNING - No val key and type key found in preprocessor domain of configuration.json file.
+2025-07-05 19:31:53,625 - modelscope - WARNING - Cannot find available config to build preprocessor at mode inference, current config: {'model_dir': './dg/iic/cv_dla34_table-structure-recognition_cycle-centernet'}. trying to build by task and model information.
+2025-07-05 19:31:53,625 - modelscope - WARNING - Find task: table-recognition, model type: None. Insufficient information to build preprocessor, skip building preprocessor
+2025-07-05 19:31:53,674 - modelscope - INFO - loading model from ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet/pytorch_model.pt
+/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/bin/python: Error while finding module specification for '2.py' (ModuleNotFoundError: __path__ attribute not found on '2' while trying to find '2.py')

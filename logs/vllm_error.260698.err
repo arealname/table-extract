@@ -1,0 +1,29 @@
+2025-07-05 19:28:07,355 - modelscope - INFO - PyTorch version 1.7.1+cu110 Found.
+2025-07-05 19:28:07,359 - modelscope - INFO - Loading ast index from /nfsshare/home/chengwenjie/.cache/modelscope/ast_indexer
+2025-07-05 19:28:07,901 - modelscope - INFO - Loading done! Current index file version is 1.9.4, with md5 44b2b63dcf85911a7b8975e99b7efe4b and a total number of 945 components indexed
+2025-07-05 19:28:11,451 - modelscope - INFO - initiate model from ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet
+2025-07-05 19:28:11,452 - modelscope - INFO - initiate model from location ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet.
+2025-07-05 19:28:11,456 - modelscope - WARNING - No preprocessor field found in cfg.
+2025-07-05 19:28:11,456 - modelscope - WARNING - No val key and type key found in preprocessor domain of configuration.json file.
+2025-07-05 19:28:11,456 - modelscope - WARNING - Cannot find available config to build preprocessor at mode inference, current config: {'model_dir': './dg/iic/cv_dla34_table-structure-recognition_cycle-centernet'}. trying to build by task and model information.
+2025-07-05 19:28:11,456 - modelscope - WARNING - Find task: table-recognition, model type: None. Insufficient information to build preprocessor, skip building preprocessor
+2025-07-05 19:28:11,520 - modelscope - INFO - loading model from ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet/pytorch_model.pt
+Traceback (most recent call last):
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/PIL/Image.py", line 2543, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/runpy.py", line 185, in _run_module_as_main
+    mod_name, mod_spec, code = _get_module_details(mod_name, _Error)
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/runpy.py", line 111, in _get_module_details
+    __import__(pkg_name)
+  File "/nfsshare/home/chengwenjie/pro/Extract/llm_related/table_extract/2.py", line 173, in <module>
+    draw_text_boxes(image_path, boxes, texts)
+  File "/nfsshare/home/chengwenjie/pro/Extract/llm_related/table_extract/2.py", line 168, in draw_text_boxes
+    img.save('你保存的图片路径')
+  File "/nfsshare/home/chengwenjie/anaconda3/envs/py38_env/lib/python3.8/site-packages/PIL/Image.py", line 2546, in save
+    raise ValueError(msg) from e
+ValueError: unknown file extension: 

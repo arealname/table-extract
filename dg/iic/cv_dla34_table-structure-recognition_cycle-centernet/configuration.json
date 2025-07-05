@@ -1,0 +1,7 @@
+{
+    "task": "table-recognition",
+    "framework": "pytorch",
+    "pipeline": {
+        "type": "dla34-table-recognition"
+    }
+}

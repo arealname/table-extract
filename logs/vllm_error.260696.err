@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 189, in _run_module_as_main
+  File "<frozen runpy>", line 112, in _get_module_details
+  File "/nfsshare/home/chengwenjie/pro/Extract/llm_related/table_extract/2.py", line 4, in <module>
+    from modelscope.pipelines import pipeline
+ModuleNotFoundError: No module named 'modelscope'

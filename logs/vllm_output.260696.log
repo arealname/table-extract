@@ -1,0 +1,80 @@
+Sender: LSF System <lsfadmin@gpu07>
+Subject: Job 260696: <#!/bin/bash;#BSUB -m gpu07                    # 明确调度空闲节点;#BSUB -gpu "num=1:mode=exclusive_process"  # 分配1张GPU卡;#BSUB -n 4                             # 分配4个CPU核心;#BSUB -R "rusage[mem=32G]"             # 分配32GB内存（按你需要的大小设置）;#BSUB -W 04:00                         # 最多运行时间4小时;#BSUB -o logs/vllm_output.%J.log       # 标准输出日志;#BSUB -e logs/vllm_error.%J.err        # 错误日志; # 创建日志目录（如果没提前建好）;mkdir -p logs; nvidia-smi; export CUDA_HOME=/nfsshare/apps/cuda-11.0;export LD_LIBRARY_PATH=$CUDA_HOME/lib64; python -m 2.py \;--model ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet> in cluster <cluster_lsf> Exited
+
+Job <#!/bin/bash;#BSUB -m gpu07                    # 明确调度空闲节点;#BSUB -gpu "num=1:mode=exclusive_process"  # 分配1张GPU卡;#BSUB -n 4                             # 分配4个CPU核心;#BSUB -R "rusage[mem=32G]"             # 分配32GB内存（按你需要的大小设置）;#BSUB -W 04:00                         # 最多运行时间4小时;#BSUB -o logs/vllm_output.%J.log       # 标准输出日志;#BSUB -e logs/vllm_error.%J.err        # 错误日志; # 创建日志目录（如果没提前建好）;mkdir -p logs; nvidia-smi; export CUDA_HOME=/nfsshare/apps/cuda-11.0;export LD_LIBRARY_PATH=$CUDA_HOME/lib64; python -m 2.py \;--model ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet> was submitted from host <mgtgpu02> by user <chengwenjie> in cluster <cluster_lsf> at Sat Jul  5 19:01:50 2025
+Job was executed on host(s) <4*gpu07>, in queue <gpu>, as user <chengwenjie> in cluster <cluster_lsf> at Sat Jul  5 19:01:51 2025
+</nfsshare/home/chengwenjie> was used as the home directory.
+</nfsshare/home/chengwenjie/pro/Extract/llm_related/table_extract> was used as the working directory.
+Started at Sat Jul  5 19:01:51 2025
+Terminated at Sat Jul  5 19:01:53 2025
+Results reported at Sat Jul  5 19:01:53 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -m gpu07                    # 明确调度空闲节点
+#BSUB -gpu "num=1:mode=exclusive_process"  # 分配1张GPU卡
+#BSUB -n 4                             # 分配4个CPU核心
+#BSUB -R "rusage[mem=32G]"             # 分配32GB内存（按你需要的大小设置）
+#BSUB -W 04:00                         # 最多运行时间4小时
+#BSUB -o logs/vllm_output.%J.log       # 标准输出日志
+#BSUB -e logs/vllm_error.%J.err        # 错误日志
+
+# 创建日志目录（如果没提前建好）
+mkdir -p logs
+
+nvidia-smi
+
+export CUDA_HOME=/nfsshare/apps/cuda-11.0
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64
+
+python -m 2.py \
+--model ./dg/iic/cv_dla34_table-structure-recognition_cycle-centernet
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.26 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     32768.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) follows:
+
+Sat Jul  5 19:01:52 2025       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.183.06             Driver Version: 535.183.06   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-PCIE-32GB           Off | 00000000:06:00.0 Off |                    0 |
+| N/A   35C    P0              25W / 250W |      0MiB / 32768MiB |      0%   E. Process |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+
+PS:
+
+Read file <logs/vllm_error.260696.err> for stderr output of this job.
+
